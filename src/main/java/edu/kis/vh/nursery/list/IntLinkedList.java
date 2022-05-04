@@ -8,7 +8,7 @@ public class IntLinkedList {
         private Node prev, next;
 
         public Node(int i) {
-            this.value = value;
+            this.value = i;
         }
 
         public int getValue() {
