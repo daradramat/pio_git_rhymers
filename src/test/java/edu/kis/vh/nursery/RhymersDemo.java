@@ -4,10 +4,11 @@ import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RhymersDemo {
-
     public static void main(String[] args) {
-        RhymersFactory factory = new DefaultRhymersFactory();
+        testRhymers(new DefaultRhymersFactory());
+    }
 
+    private static void testRhymers(RhymersFactory factory) {
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
 
@@ -19,6 +20,7 @@ class RhymersDemo {
         for (int i = 1; i < 15; i++)
             rhymers[3].countIn(rn.nextInt(20));
 
+        //TODO zmienić pętlę for na foreach
         for (int i = 0; i < rhymers.length; i++) {
             while (!rhymers[i].callCheck())
                 System.out.print(rhymers[i].countOut() + "  ");
@@ -27,7 +29,5 @@ class RhymersDemo {
 
         System.out.println("total rejected is "
                 + ((HanoiRhymer) rhymers[3]).reportRejected());
-
     }
-
 }

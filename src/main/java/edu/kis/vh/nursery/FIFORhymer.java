@@ -4,6 +4,11 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
+    /**
+     * Nadpisana metoda countOut z klasy DefaultCountingOutRhymer
+     * Usuwa pierwszy element z tablicy
+     * @return wartość usuniętego elementu
+     */
     @Override
     public int countOut() {
         while (!callCheck())
