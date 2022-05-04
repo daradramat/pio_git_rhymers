@@ -18,6 +18,7 @@ public class DefaultCountingOutRhymer {
             numbers[++total] = in;
     }
 
+    //TODO zmienić nazwę metody (obecna nie mówi co dana metoda robi)
     public boolean callCheck() {
         return total == ERR_CODE;
     }
@@ -26,6 +27,7 @@ public class DefaultCountingOutRhymer {
         return total == MAX_STACK_CAPACITY;
     }
 
+    //TODO zmienić nazwę metody (obecna nie mówi co dana metoda robi)
     protected int peekaboo() {
         if (callCheck())
             return ERR_CODE;
